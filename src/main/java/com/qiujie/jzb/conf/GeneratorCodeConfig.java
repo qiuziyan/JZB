@@ -40,10 +40,10 @@ public class GeneratorCodeConfig {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc\\:oracle\\:thin\\:@20.147.170.163\\:1521\\:orcl");
+        dsc.setUrl("jdbc:mysql://123.57.42.109/demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-        dsc.setUsername("zpext");
-        dsc.setPassword("zpext");
+        dsc.setUsername("root");
+        dsc.setPassword("123456");
         mpg.setDataSource(dsc);
 
         // 包配置

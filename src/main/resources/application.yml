@@ -3,10 +3,10 @@ server:
 
 spring:
 datasource:
-driver-class-name: oracle.jdbc.driver.OracleDriver
-url: jdbc\:oracle\:thin\:@20.147.170.163\:1521\:orcl
-username: zpext
-password: zpext
+driver-class-name: com.mysql.cj.jdbc.Driver
+url: jdbc:mysql://123.57.42.109/demo?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+username: root
+password: 123456
 jackson:
 date-format: yyyy-MM-dd HH:mm:ss
 time-zone: GMT+8
