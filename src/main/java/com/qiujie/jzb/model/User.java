@@ -1,4 +1,4 @@
-package com.qiujie.jzb.model.auto;
+package com.qiujie.jzb.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;

@@ -1,7 +1,7 @@
 package com.qiujie.jzb.service.impl;
 
-import com.qiujie.jzb.model.auto.User;
-import com.qiujie.jzb.mapper.auto.UserMapper;
+import com.qiujie.jzb.model.User;
+import com.qiujie.jzb.mapper.UserMapper;
 import com.qiujie.jzb.service.IUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.qiujie.jzb.service;
 
-import com.qiujie.jzb.model.auto.User;
+import com.qiujie.jzb.model.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

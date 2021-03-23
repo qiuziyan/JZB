@@ -1,6 +1,6 @@
-package com.qiujie.jzb.mapper.auto;
+package com.qiujie.jzb.mapper;
 
-import com.qiujie.jzb.model.auto.User;
+import com.qiujie.jzb.model.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
