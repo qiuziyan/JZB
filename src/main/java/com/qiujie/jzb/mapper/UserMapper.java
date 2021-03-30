@@ -1,7 +1,9 @@
 package com.qiujie.jzb.mapper;
 
 import com.qiujie.jzb.model.User;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
