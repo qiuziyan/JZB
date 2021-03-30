@@ -1,8 +1,9 @@
-package com.qiujie.jzb.mapper;
+package com.qiujie.jzb.service.impl;
 
 import com.qiujie.jzb.model.User;
+public interface UserService{
 
-public interface UserMapper {
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(User record);
@@ -14,4 +15,5 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
 }

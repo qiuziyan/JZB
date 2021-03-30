@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qiujie.jzb.mapper.InconmeExpensesMapper">
+  <resultMap id="BaseResultMap" type="com.qiujie.jzb.model.InconmeExpenses">
+    <!--@mbg.generated-->
+    <!--@Table inconme_expenses-->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="amount" jdbcType="DOUBLE" property="amount" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="date" jdbcType="VARCHAR" property="date" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="i_e_flag" jdbcType="VARCHAR" property="iEFlag" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, amount, `type`, `date`, remark, i_e_flag
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from inconme_expenses
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <!--@mbg.generated-->
+    delete from inconme_expenses
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.qiujie.jzb.model.InconmeExpenses">
+    <!--@mbg.generated-->
+    insert into inconme_expenses (id, amount, `type`, 
+      `date`, remark, i_e_flag
+      )
+    values (#{id,jdbcType=VARCHAR}, #{amount,jdbcType=DOUBLE}, #{type,jdbcType=VARCHAR}, 
+      #{date,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{iEFlag,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.qiujie.jzb.model.InconmeExpenses">
+    <!--@mbg.generated-->
+    insert into inconme_expenses
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="amount != null">
+        amount,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="date != null">
+        `date`,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="iEFlag != null">
+        i_e_flag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null">
+        #{amount,jdbcType=DOUBLE},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null">
+        #{date,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="iEFlag != null">
+        #{iEFlag,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qiujie.jzb.model.InconmeExpenses">
+    <!--@mbg.generated-->
+    update inconme_expenses
+    <set>
+      <if test="amount != null">
+        amount = #{amount,jdbcType=DOUBLE},
+      </if>
+      <if test="type != null">
+        `type` = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null">
+        `date` = #{date,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="iEFlag != null">
+        i_e_flag = #{iEFlag,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qiujie.jzb.model.InconmeExpenses">
+    <!--@mbg.generated-->
+    update inconme_expenses
+    set amount = #{amount,jdbcType=DOUBLE},
+      `type` = #{type,jdbcType=VARCHAR},
+      `date` = #{date,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      i_e_flag = #{iEFlag,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
