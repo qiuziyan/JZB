@@ -1,9 +1,6 @@
-package com.qiujie.jzb.conf;
+package com.qiujie.jzb.interceptor;
 
-
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import com.qiujie.jzb.model.User;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -12,10 +9,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Component
-public class MybatisPlusConfig implements HandlerInterceptor {
+public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        return false;
+        System.out.println("被拦截");
+        User user = (User) request.getSession().getAttribute("user");
+        if(user == null){
+            System.out.println("被拦截");
+            response.sendRedirect("/index");
+            return false;
+        }
+        return true;
     }
 
     @Override
