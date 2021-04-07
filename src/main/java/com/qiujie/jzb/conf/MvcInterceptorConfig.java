@@ -3,9 +3,11 @@ package com.qiujie.jzb.conf;
 import com.qiujie.jzb.interceptor.LoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
-@Configurable
+@Component
 public class MvcInterceptorConfig extends WebMvcConfigurationSupport {
     @Autowired
     private LoginInterceptor loginInterceptor;
