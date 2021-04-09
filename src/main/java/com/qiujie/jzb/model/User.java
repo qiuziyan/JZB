@@ -15,4 +15,10 @@ public class User {
     private Integer debt;
 
     private Double stockfund;
+
+    public User(String userName, String passWord) {
+        this.userName = userName;
+        this.passWord = passWord;
+    }
+    public User(){}
 }
