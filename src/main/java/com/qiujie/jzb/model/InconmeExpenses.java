@@ -6,6 +6,8 @@ import lombok.Data;
 public class InconmeExpenses {
     private String id;
 
+    private String userId;
+
     private Double amount;
 
     private String type;

@@ -26,8 +26,11 @@ public class MyException extends  Exception{
     public MyException(String message, Throwable cause, String errorCode, String errorMsg) {
         super(message, cause);
         this.errorCode = errorCode;
+
+
         this.errorMsg = errorMsg;
     }
+
 
     public MyException(Throwable cause, String errorCode, String errorMsg) {
         super(cause);

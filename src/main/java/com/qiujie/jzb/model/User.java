@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class User {
-    private Integer id;
+    private String id;
 
     private String userName;
 
@@ -12,7 +12,7 @@ public class User {
 
     private Double balance;
 
-    private Integer debt;
+    private Double debt;
 
     private Double stockfund;
 

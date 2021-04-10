@@ -1,4 +1,6 @@
 package com.qiujie.jzb.mapper;
+import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 import com.qiujie.jzb.model.InconmeExpenses;
 import org.apache.ibatis.annotations.Mapper;
@@ -16,4 +18,15 @@ public interface InconmeExpensesMapper {
     int updateByPrimaryKeySelective(InconmeExpenses record);
 
     int updateByPrimaryKey(InconmeExpenses record);
+
+   Double  getTotalAmountByDateAndUserId(@Param("date")String date,@Param("userId")String userId);
+
+
+
+
+
+
+
+
+
 }

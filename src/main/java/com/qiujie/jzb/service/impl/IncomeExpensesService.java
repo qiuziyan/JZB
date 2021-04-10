@@ -1,7 +1,7 @@
 package com.qiujie.jzb.service.impl;
 
 import com.qiujie.jzb.model.InconmeExpenses;
-public interface InconmeExpensesService{
+public interface IncomeExpensesService {
 
 
     int deleteByPrimaryKey(String id);
@@ -15,5 +15,7 @@ public interface InconmeExpensesService{
     int updateByPrimaryKeySelective(InconmeExpenses record);
 
     int updateByPrimaryKey(InconmeExpenses record);
+
+    double getSpendingByDate(String date,String userId);
 
 }

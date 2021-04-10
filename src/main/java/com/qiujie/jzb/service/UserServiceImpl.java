@@ -12,7 +12,7 @@ public class UserServiceImpl implements UserService{
     private UserMapper userMapper;
 
     @Override
-    public int deleteByPrimaryKey(Integer id) {
+    public int deleteByPrimaryKey(String id) {
         return userMapper.deleteByPrimaryKey(id);
     }
 
@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User selectByPrimaryKey(Integer id) {
+    public User selectByPrimaryKey(String id) {
         return userMapper.selectByPrimaryKey(id);
     }
 
@@ -42,8 +42,9 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User selectUser(User user) {
-        return userMapper.selectByAll(user);
+    public User FindByUserName(String userName) {
+        return userMapper.findByUserName(userName);
     }
+
 
 }

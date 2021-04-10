@@ -4,9 +4,9 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import com.qiujie.jzb.mapper.InconmeExpensesMapper;
 import com.qiujie.jzb.model.InconmeExpenses;
-import com.qiujie.jzb.service.impl.InconmeExpensesService;
+import com.qiujie.jzb.service.impl.IncomeExpensesService;
 @Service
-public class InconmeExpensesServiceImpl implements InconmeExpensesService{
+public class IncomeExpensesServiceImpl implements IncomeExpensesService {
 
     @Resource
     private InconmeExpensesMapper inconmeExpensesMapper;
@@ -39,6 +39,11 @@ public class InconmeExpensesServiceImpl implements InconmeExpensesService{
     @Override
     public int updateByPrimaryKey(InconmeExpenses record) {
         return inconmeExpensesMapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public double getSpendingByDate(String date,String userId) {
+        return inconmeExpensesMapper.getTotalAmountByDateAndUserId(date,userId);
     }
 
 }

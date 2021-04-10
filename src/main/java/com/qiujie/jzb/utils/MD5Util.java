@@ -64,5 +64,9 @@ public class MD5Util {
         }
         return encodingString.equals(encodeByMD5(sourceString));
     }
+
+    public static void main(String[] args) throws NoSuchAlgorithmException {
+        System.out.println(MD5Util.encodeByMD5("123456"));
+    }
 }
 
